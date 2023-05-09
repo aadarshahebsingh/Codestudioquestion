@@ -1,0 +1,36 @@
+#include <bits/stdc++.h> 
+#include <iostream>
+using namespace std;
+
+void thearr(vector<int> &arr,int k){
+    int n=arr.size();
+    while(k>0){
+        int x=arr[0];
+        for(int i=0;i<n-1;i++){
+            arr[i]=arr[i+1];
+        }arr[n-1]=x;
+        k--;
+    }
+}
+int main() {
+    //Write your code here
+    int sizeofarr;
+    // cout<<"Enter the size of the array"<<endl;
+    cin>>sizeofarr;
+    vector<int> arr;
+    while(sizeofarr>0){
+        int ele;
+        // cout<<"Enter the element"<<endl;
+        cin>>ele;
+        arr.push_back(ele);
+        sizeofarr--;
+    }
+    int nof;
+    // cout<<"The no with which you want to rotate"<<endl;
+    cin>>nof;
+    thearr(arr,nof);
+    for(auto c:arr){
+        cout<<c<<" ";
+    }
+    return 0;
+}
