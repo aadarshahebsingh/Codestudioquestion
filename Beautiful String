@@ -25,5 +25,6 @@ int makeBeautiful(string str) {
             }
         }
     }
-    return sum;
+    int n=str.length();
+    return min(sum,n-sum);
 }
