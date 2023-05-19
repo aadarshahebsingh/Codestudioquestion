@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+#include <string>
+bool trueorfalse(string &str){
+	int i=0;
+	int j=str.length()-1;
+	while(i<j){
+		if(str[i]!=str[j]){
+			return false;
+			
+		}
+		i++;
+		j--;
+	}
+	return true;
+} 
+string nextLargestPalindrome(string s, int length){
+	// Write your code here.
+	string str=s;
+	while(true){
+		str=to_string(stoll(str)+1);
+		if(trueorfalse(str)){
+			return str;
+		}
+	}
+}
